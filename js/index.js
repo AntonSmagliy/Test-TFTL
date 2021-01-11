@@ -51,19 +51,19 @@ slider.on('slideChange', function(e){
         }
     );
     if(index == 0){
-        f.style.backgroundImage = "url('../img/image3.1.png')"
-        s.style.backgroundImage = "url('../img/image11.png')"
-        t.style.backgroundImage = "url('../img/image33.png')"
+        f.style.backgroundImage = "url('/../img/image3.1.png')"
+        s.style.backgroundImage = "url('/../img/image11.png')"
+        t.style.backgroundImage = "url('/../img/image33.png')"
     }
     if(index == 1){
-        f.style.backgroundImage = "url('../img/image11.png')"
-        s.style.backgroundImage = "url('../img/image33.png')"
-        t.style.backgroundImage = "url('../img/image3.1.png')"
+        f.style.backgroundImage = "url('/../img/image11.png')"
+        s.style.backgroundImage = "url('/../img/image33.png')"
+        t.style.backgroundImage = "url('/../img/image3.1.png')"
     }
     if(index == 2){
-        f.style.backgroundImage = "url('../img/image33.png')"
-        s.style.backgroundImage = "url('../img/image3.1.png')"
-        t.style.backgroundImage = "url('../img/image11.png')"
+        f.style.backgroundImage = "url('/../img/image33.png')"
+        s.style.backgroundImage = "url('/../img/image3.1.png')"
+        t.style.backgroundImage = "url('/../img/image11.png')"
     }
 })
 
