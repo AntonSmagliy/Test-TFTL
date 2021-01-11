@@ -75,6 +75,3 @@ function showMenu(){
     menu.classList.toggle('menu-mobile');
     document.getElementById('overlay').classList.toggle('dpb')
 }
-
-var paralax = document.querySelector('.wrp');
-var parallaxInstance = new Parallax(paralax)
