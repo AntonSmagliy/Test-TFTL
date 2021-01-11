@@ -1,0 +1,259 @@
+*
+    box-sizing: border-box
+html
+    font-size: 10px
+    cursor: url('../img/circle.png'), auto
+body
+    overflow: hidden    
+#main
+    display: flex
+    flex-direction: column
+    position: relative
+    width: 100%
+    height: 100vh
+.dpb
+    display: block!important
+
+
+#overlay
+    display: none
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, .8)
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 102
+
+header
+    padding: 40px 48px 0 48px
+    display: flex
+    justify-content: space-between
+    .logo
+        animation: fade 1s
+        img
+            display: block
+    .menu
+        animation: fade 1s
+        .burger
+            position: relative
+            display: none
+            cursor: pointer
+            z-index: 103
+            span
+                display: block
+                width: 20px
+                height: 1px
+                background: rgba(40, 40, 40, 0.57)
+                margin-bottom: 7px
+                transition: .5s
+                &:last-child
+                    margin-bottom: 0
+            &-active
+                span
+                    background: #ffffff
+                    &:first-child
+                        transform: rotate(45deg)
+                        margin-bottom: -1px
+                    &:last-child
+                        transform: rotate(-45deg)
+        ul
+            li
+                text-decoration: none
+                font-family: TT Travels
+                font-weight: 300
+                font-size: 1.1rem
+                line-height: 1.3rem
+                text-align: right
+                letter-spacing: 0.02em
+                text-transform: capitalize
+        .menu-mobile
+            display: block
+            position: fixed
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 103
+            color: #ffffff
+            li
+                text-align: center
+                margin-bottom: 6px
+                &:last-child
+                    margin-bottom: 0
+
+.svg
+    width: fit-content
+    margin: 0 auto
+    position: absolute
+    top: 10px
+    left: 50%
+    transform: translateX(-50%)
+    svg
+        path
+            stroke-dasharray: 1917
+            stroke-dashoffset: 1917
+            animation: anim 2s ease forwards
+#slider
+    margin: auto 0
+    .swiper-container
+        .swiper-wrapper
+            width: fit-content
+            height: 100%
+            .swiper-slide
+                width: fit-content
+                height: 100%
+                p
+                    font-family: 'Schnyder Cond XL Demi'
+                    font-size: 125.581px
+                    text-transform: uppercase
+                    color: #580300
+                    text-align: center
+                    mix-blend-mode: darken
+                    letter-spacing: 13px
+
+.images
+    width: fit-content
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    justify-content: center
+    &-item
+        background-size: cover
+        background-repeat: no-repeat
+        opacity: 1
+    #f
+        width: 238px
+        height: 331px
+        background-image: url('../img/image3.1.png')
+        background-size: cover
+        background-repeat: no-repeat
+        transform: rotate(1.1deg)
+        margin-top: 130px
+    #s
+        width: 476px
+        height: 702px
+        background-image: url('../img/image11.png')
+        transform: rotate(1.5deg)
+    #t
+        width: 345px
+        height: 238px
+        background-image: url('../img/image33.png')
+        transform: rotate(2.03deg)
+        align-self: flex-end
+        margin-bottom: 43px
+        margin-left: -50px
+.fade 
+    animation: fade 1s
+@keyframes fade
+    from
+        opacity: 0
+    to
+        opacity: 1
+.soc
+    animation: fade 1s
+    padding: 0 0 48px 48px
+    &-item
+        a
+            font-family: TT Travels
+            font-size: 1.1rem
+            line-height: 1.3rem
+            letter-spacing: 0.02em
+            color: #000000
+            margin-right: 73px
+            position: relative
+            text-decoration: none
+            &:last-child
+                margin-right: 0
+                &::after
+                    display: none
+            &::after
+                content: ''
+                display: block
+                width: 56px
+                height: 1px
+                background: #393939
+                opacity: 0.24
+                position: absolute
+                left: calc(100% + 10px)
+                top: 50%
+                transform: translateY(-50%)
+.swiper-slide-prev p 
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: black
+    color: transparent!important
+    transform: rotate(-1.5deg)
+.swiper-slide-next p
+    transform: rotate(1.5deg)
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: black
+    color: transparent!important
+
+#tooltip
+    display: none
+    position: fixed
+    font-family: 'TT Travels'
+    font-size: .8rem
+    line-height: 1rem
+    letter-spacing: 0.02em
+    text-transform: uppercase
+    color: #000000
+    z-index: 100
+#slider:hover
+    #tooltip
+        display: block
+
+@keyframes anim
+    to
+        stroke-dashoffset: 0
+        
+
+@media screen and ( max-width: 1024px )
+    #main
+        height: calc(var(--vh, 1vh) * 100)
+    .images
+        #f
+            width: 163px
+            height: 226px
+        #s
+            width: 359px
+            height: 530px
+        #t
+            width: 234px
+            height: 162px
+    #slider .swiper-container .swiper-wrapper .swiper-slide p
+        font-size: 96px
+    .soc
+        padding: 0 0 24px 24px
+
+@media screen and ( max-width: 768px )
+    #slider
+        transform: translateY(-50px)
+        z-index: 101
+    
+@media screen and ( max-width: 730px )
+    #f
+        display: none
+    #t
+        display: none
+    header .menu
+        .burger
+            display: block
+        ul
+            display: none
+    .svg
+        top: -35px
+        svg
+            display: block
+            width: 95%
+            margin: 0 auto
+    #slider
+        transform: none 
+        .swiper-container .swiper-wrapper .swiper-slide p
+            font-size: 48px
+            mix-blend-mode: normal
+            letter-spacing: 2px
+    #s
+        width: 273px!important
+        height: 403px!important
